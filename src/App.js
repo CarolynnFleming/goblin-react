@@ -17,7 +17,7 @@ function App() {
   const [filteredGoblins, setFilteredGoblins] = useState([]);
   const [goblinFormName, setGoblinFormName] = useState('');
   const [goblinFormHp, setGoblinFormHp] = useState('');
-  const [goblinFormColor, setGoblinFormColor] = useState('');
+  const [goblinFormColor, setGoblinFormColor] = useState('green');
 
   
   function submitGoblin(e) {
