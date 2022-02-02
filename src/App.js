@@ -17,7 +17,7 @@ function App() {
   const [filteredGoblins, setFilteredGoblins] = useState([]);
   const [goblinFormName, setGoblinFormName] = useState('');
   const [goblinFormHp, setGoblinFormHp] = useState('');
-  const [goblinFormColor, setGoblinFormColor] = useState('electric blue');
+  const [goblinFormColor, setGoblinFormColor] = useState('');
 
   
   function submitGoblin(e) {
@@ -35,7 +35,7 @@ function App() {
     // clear out the goblin form state items by setting them to empty strings. This will cause the form to reset in the UI.
     setGoblinFormName('');
     setGoblinFormHp('');
-    setGoblinFormColor('electric blue');
+    setGoblinFormColor('green');
   }
 
   function handleDeleteGoblin(id) {
@@ -62,6 +62,9 @@ function App() {
             use the goblin form state to make a goblin object and to display it. 
             This will let the user see the current form state 
           */
+          name: goblinFormName,
+          hp: goblinFormHp,
+          color: goblinFormColor
         }}/>
       </div>
       <div className='goblin-filter quarter'>
@@ -70,17 +73,17 @@ function App() {
         <input onChange={(e) => handleFilterGoblins(e.target.value)} />
       </div>
       <GoblinForm 
-        /*
-        This component takes in a ton of props! 
-        Here is the list of props to pass:
-          submitGoblin,
+        
+        // This component takes in a ton of props! 
+        // Here is the list of props to pass:
+          submitGoblin={submitGoblin}
           goblinFormName, 
           setGoblinFormName,
           goblinFormColor, 
           setGoblinFormColor,
           goblinFormHP, 
           setGoblinFormHP,
-        */
+
       />
       <GoblinList 
         goblins={[]} // this takes in an array of goblins. If the filteredGoblins has a length, use that array. Otherwise, use the allGoblins array 
