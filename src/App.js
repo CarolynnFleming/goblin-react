@@ -14,6 +14,7 @@ function App() {
       goblinFormColor, which is how we track the user input for the current color of the goblin in the form
 */
 const [allGoblins, setAllGoblins] = useState([]);
+const [filteredGoblins, setFilteredGoblins] = useState([]);
 
   
   function submitGoblin(e) {
