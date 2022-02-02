@@ -76,13 +76,13 @@ function App() {
         
         // This component takes in a ton of props! 
         // Here is the list of props to pass:
-          submitGoblin={submitGoblin}
-          goblinFormName, 
-          setGoblinFormName,
-          goblinFormColor, 
-          setGoblinFormColor,
-          goblinFormHP, 
-          setGoblinFormHP,
+        submitGoblin={submitGoblin}
+        goblinFormName={goblinFormName} 
+        setGoblinFormName={setGoblinFormName}
+        goblinFormColor={goblinFormColor} 
+        setGoblinFormColor={setGoblinFormColor}
+        goblinFormHP={goblinFormHp}
+        setGoblinFormHP={setGoblinFormHp}
 
       />
       <GoblinList 
