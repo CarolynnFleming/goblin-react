@@ -25,7 +25,7 @@ export default function GoblinForm(props) {
         <label>
             Color
           {/* onChange, use the prop setGoblinFormColor to set the parent state */}
-          <select required value={props.goblinFormColor}>
+          <select required value={props.goblinFormColor}onChange={e => props.setGoblinFormColor(e.target.value)}>
             {/* note that we're controlling the input's value from parent state */}
             <option value="lightgreen">Green</option>
             <option value="lightblue">Blue</option>
