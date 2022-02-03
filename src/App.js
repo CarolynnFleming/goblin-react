@@ -16,7 +16,7 @@ function App() {
   const [allGoblins, setAllGoblins] = useState([]);
   const [filteredGoblins, setFilteredGoblins] = useState([]);
   const [goblinFormName, setGoblinFormName] = useState('');
-  const [goblinFormHp, setGoblinFormHp] = useState('');
+  const [goblinFormHP, setGoblinFormHP] = useState(1);
   const [goblinFormColor, setGoblinFormColor] = useState('');
 
   
@@ -27,14 +27,14 @@ function App() {
     const newGoblin = {
       id:Math.ceil(Math.random() * 100),
       name: goblinFormName,
-      hp: goblinFormHp,
+      hp: goblinFormHP,
       color: goblinFormColor
     };
     // update the allGoblins array. Add the new goblin to the allGoblins array immutably.
     setAllGoblins([...allGoblins, newGoblin]);
     // clear out the goblin form state items by setting them to empty strings. This will cause the form to reset in the UI.
     setGoblinFormName('');
-    setGoblinFormHp(1);
+    setGoblinFormHP(1);
     setGoblinFormColor('green');
   }
 
@@ -63,7 +63,7 @@ function App() {
             This will let the user see the current form state 
           */
           name: goblinFormName,
-          hp: goblinFormHp,
+          hp: goblinFormHP,
           color: goblinFormColor
         }}/>
       </div>
@@ -81,8 +81,8 @@ function App() {
         setGoblinFormName={setGoblinFormName}
         goblinFormColor={goblinFormColor}
         setGoblinFormColor={setGoblinFormColor}
-        goblinFormHP={goblinFormHp} 
-        setGoblinFormHP={setGoblinFormHp}
+        goblinFormHP={goblinFormHP} 
+        setGoblinFormHP={setGoblinFormHP}
         
       />
       <GoblinList 
