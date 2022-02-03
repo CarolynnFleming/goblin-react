@@ -44,6 +44,7 @@ function App() {
     // use splice to delete the goblin object at this index
     allGoblins.splice(goblinIndex, 1);
     // update the allGoblins array immutably to this new, smaller array
+    setAllGoblins([...allGoblins]);
   }
 
   function handleFilterGoblins(search) {
